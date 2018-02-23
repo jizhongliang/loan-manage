@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script type="text/javascript" src="../internal.js"></script>
+    <style type="text/css">
+        *{margin:0;padding:0;color: #838383;}
+        table{font-size: 13px; margin-top:35px; line-height:30px}
+        .txt{padding: 5px; font-size: 14px;  border: 1px solid #D5D5D5; width: 180px;}
+    </style>
+</head>
+<body>
+    <table width="100%"  cellpadding="0" cellspacing="0">
+        <tr  valign="middle">
+            <td style="text-align: right;"><label for="text">电话号码：</label></td>
+            <td style="text-align: left;"><input class="txt" id="telNum" type="text" /></td>
+        </tr>
+    </table>
+<script type="text/javascript">
+    var range = editor.selection.getRange(),
+        link = range.collapsed ? editor.queryCommandValue( "link" ) : editor.selection.getStart(),
+        newLink = link,
+        url,
+        rangeLink = domUtils.findParentByTagName(range.getCommonAncestor(),'a',true),
+        orgText;
+    link = domUtils.findParentByTagName( link, "a", true );
+    if(link){
+    	var num = link.toString();
+    	num = num.replace('tel:','');
+    	$G("telNum").value = num;
+    }
+    
+    function handleDialogOk(){
+        var oldHref =$G('telNum').value.replace(/^\s+|\s+$/g, '');
+        var href = oldHref;
+        href  = "tel:" + href;
+        var obj = {
+        	'href' : href
+        };
+        if(newLink == null || newLink == undefined || newLink == "undefined"){
+        	obj.textValue = oldHref;
+        }
+        if(href){
+        	editor.execCommand('link',utils.clearEmptyAttrs(obj));
+        } 
+    }
+    dialog.onok = handleDialogOk;
+</script>
+</body>
+</html>

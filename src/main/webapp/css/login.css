@@ -1,0 +1,40 @@
+@charset "utf-8";blockquote,body,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,html,input,li,ol,p,pre,ul{padding:0;margin:0}
+address,caption,cite,code,em,h1,h2,h3,h4,h5,h6,pre,strong,table,td,th{font-size:1em;font-style:normal;font-weight:400}
+body,button,input,textarea{font-family:"Microsoft YaHei",Arial,sans-serif!important}
+body,html{height:100%}
+body{background:no-repeat center center;background-size:cover;min-height:400px}
+.loginbox{box-shadow:0 10px 60px rgba(0,0,0,.4);width:380px;border-radius:4px;padding:27px;background:#fff;position:absolute;top:46%;left:50%;margin-top:-209px;margin-left:-314px}
+a{text-decoration:none;color:#adf;font-weight:800}
+a:hover{color:#fff}
+.background{position:absolute;overflow:hidden;z-index:-10;width:100%;height:100%;right:0;top:0;bottom:0;left:0}
+.title{width:100%;height:100px;padding-top:0;border-top-left-radius:3px;border-top-right-radius:3px}
+.title .logo{text-align:center;font-size:24px;width:100%;padding-top:40px;color:#6f6f6f}
+.title .logo i{color:#adf;font-weight:400;margin-right:10px}
+.title .info{text-align:right;font-size:14px;color:#adf;padding-right:120px;padding-top:30px}
+.w80{width:80px}
+.inputs{padding:30px 30px 0 135px}
+.inputs div{margin-bottom:15px}
+.inputs div span{display:block;float:left;width:80px;line-height:30px;height:30px}
+.inputs div input{height:33px;width:240px}
+.inputs .check_code{margin-bottom:0}
+.inputs .check_code input{width:110px;display:block;float:left}
+.inputs .check_code img{display:block;float:left;padding-left:10px;width:70px;height:32px}
+.form{padding-top:13px}
+input,input:focus{outline:0;box-shadow:none;border:1px solid #bbb;padding:3px 5px}
+input:focus{border-color:#75A1F0;outline:0;box-shadow:0 0 12px #75A1F0;-webkit-transition:all 218ms;-moz-transition:all 218ms;-o-transition:all 218ms;-ms-transition:all 218ms;transition:all 218ms}
+.actions{padding-left:195px}
+.actions .checkbox{display:inline-block;margin:0;margin-left:20px}
+.checkbox{border:none;padding-right:10px}
+.actions #submit{border:none;outline:0;background:#09C;color:#fff;padding:5px 30px;margin-left:20px;padding:2px 15px\9}
+.actions #submit:hover{background:#09C}
+.actions #submit:active{background:#444}
+.msg{color:#f96;text-align:center;margin-bottom:-10px;padding-top:10px;margin-left:-100px}
+.common_footer{color:#eee;position:absolute;bottom:0;text-align:center;width:100%;background:#444;background:rgba(0,0,0,.3);padding:10px 0 10px 0}
+.success{padding:10px;color:#3c763d;background-color:#dff0d8;border:#d6e9c6 1px solid}
+.error{padding:10px;color:#a94442;background-color:#f2dede;border:#ebccd1 1px solid;font-size:14px}
+.error a{background-color:#f2dede;border:#ebccd1 1px solid}
+h4{margin:0;padding:3px 10px;border-left:3px solid;margin-bottom:10px}
+.guest{text-align:center;margin:0 auto;padding:30px 0 20px 0}
+.guest a{color:#69C;text-decoration:none;border:2px solid #cdf;border-radius:20px;padding:6px 1.5em;display:inline-block}
+.guest a i{padding-left:8px}
+.guest a:hover{color:#f60;border-color:#f60}

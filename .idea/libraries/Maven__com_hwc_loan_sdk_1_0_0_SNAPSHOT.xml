@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.hwc:loan-sdk:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../repository/repository/com/hwc/loan-sdk/1.0.0-SNAPSHOT/loan-sdk-1.0.0-20171226.035525-64.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../repository/repository/com/hwc/loan-sdk/1.0.0-SNAPSHOT/loan-sdk-1.0.0-20171226.035525-64-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../repository/repository/com/hwc/loan-sdk/1.0.0-SNAPSHOT/loan-sdk-1.0.0-20171226.035525-64-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,156 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/common/shopTag.jsp"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+	<META content="IE=11.0000" http-equiv="X-UA-Compatible">
+	<META name="viewport" content="width=device-width, initial-scale=1.0">
+	<META name="renderer" content="webkit">
+	<META http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<TITLE>财位管理中心</TITLE>
+	<link href="${path}/images/ioc/favicon.ico" rel="Shortcut Icon">
+	<script type="text/javascript" src="${path}/static/jquery.min.js"></script>
+	<%--<script type="text/javascript" src="${path}/static/cookie.js"></script>--%>
+	<style type="text/css">
+		html,body{height:100%; overflow:hidden;}
+		/*body{margin:0;font-size:14px;background:#2b2b2b;}*/
+		body{margin:0;font-size:14px;background:url("${path}/static/login-bg.jpg") no-repeat;background-size: 100% 100%;}
+		.wrapper {background: -webkit-linear-gradient(top left, #228a88 0%, #1bde8c 100%);background: linear-gradient(to bottom right, #228a88 0%, #1bde8c 100%);opacity: 0.8;position: absolute;top: 45%;left: 0;width: 100%;height: 500px;margin-top: -250px;overflow: hidden;}
+		.wrapper.form-success .container h1 {-webkit-transform: translateY(85px);-ms-transform: translateY(85px);transform: translateY(85px);}
+		.container {max-width: 600px;margin: 3% auto;padding: 20px 0;height: 400px;text-align: center;}
+		.container h1 {-webkit-transition-duration: 1s;transition-duration: 1s;-webkit-transition-timing-function: ease-in-out;transition-timing-function: ease-in-out;}
+		.container h1 img{width: 150px}
+		form {position: relative;  z-index: 2;}
+		form input {outline: none; border: 1px solid rgba(255, 255, 255, 0.4);background-color: rgba(255, 255, 255, 0.2);width: 300px;border-radius: 3px;padding: 10px 15px;margin: 0 auto 10px auto;display: block;text-align: center;font-size: 18px;color: white;-webkit-transition-duration: 0.25s;transition-duration: 0.25s;font-weight: 300;}
+		form input:hover {background-color: rgba(255, 255, 255, 0.4);}
+		form input:focus {background-color: white;width: 350px;color: #53e3a6;}
+		form #submit {background-color: white;  border: 0;padding: 10px 15px;color: #53e3a6;border-radius: 3px;width: 300px;cursor: pointer;font-size: 18px;}
+		form #submit:hover {background-color: #f5f7f9;}
+		.bg-bubbles {position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: 1;}
+		.bg-bubbles li {position: absolute;list-style: none;display: block;width: 40px;height: 40px;background-color: rgba(255, 255, 255, 0.25);bottom: -160px;-webkit-animation: square 25s infinite;animation: square 25s infinite;-webkit-transition-timing-function: linear;transition-timing-function: linear;}
+		.bg-bubbles li:nth-child(1) {left: 10%;width: 160px;height: 160px;}
+		.bg-bubbles li:nth-child(2) {left: 25%;width: 80px;  height: 80px;-webkit-animation-delay: 2s;animation-delay: 2s;-webkit-animation-duration: 17s;animation-duration: 17s;}
+		.bg-bubbles li:nth-child(3) {left: 35%;-webkit-animation-delay: 4s;animation-delay: 4s;}
+		.bg-bubbles li:nth-child(4) {left: 40%;width: 60px;height: 60px;  -webkit-animation-duration: 22s;animation-duration: 22s;background-color: rgba(255, 255, 255, 0.25);}
+		.bg-bubbles li:nth-child(5) {left: 55%;}
+		.bg-bubbles li:nth-child(6) {left: 80%;width: 120px;height: 120px;-webkit-animation-delay: 3s;animation-delay: 3s;background-color: rgba(255, 255, 255, 0.2);}
+		.bg-bubbles li:nth-child(7) {left: 65%;width: 100px;height: 100px;-webkit-animation-delay: 7s;animation-delay: 7s;}
+		.bg-bubbles li:nth-child(8) {left: 60%;width: 20px;height: 20px;-webkit-animation-delay: 15s;animation-delay: 15s;-webkit-animation-duration: 40s;animation-duration: 40s;}
+		.bg-bubbles li:nth-child(9) {left: 32%;width: 10px;height: 10px;-webkit-animation-delay: 2s;animation-delay: 2s;-webkit-animation-duration: 40s;animation-duration: 40s;background-color: rgba(255, 255, 255, 0.3);}
+		.bg-bubbles li:nth-child(10) {left: 90%;width: 140px;height: 140px; -webkit-animation-delay: 11s;animation-delay: 11s;}
+		@-webkit-keyframes square {
+			0% {-webkit-transform: translateY(0);transform: translateY(0);}
+			100% {-webkit-transform: translateY(-700px) rotate(600deg);transform: translateY(-700px) rotate(600deg);}
+		}
+		@keyframes square {
+			0% {-webkit-transform: translateY(0);transform: translateY(0);}
+			100% {-webkit-transform: translateY(-700px) rotate(600deg);transform: translateY(-700px) rotate(600deg);}
+		}
+		p{position:fixed; width:100%; bottom:15px; text-align:center; color:#fff; margin:0; font-size:12px; font-family: Arial,"宋体";}
+	</style>
+</HEAD>
+<BODY>
+<%--<div class="wrapper">--%>
+<div>
+
+	<div class="container">
+		<h1>
+			<img src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg"/>
+		</h1>
+		<form method="post" action="" autocomplete="off" name="loginForm" id="loginForm">
+			<div class="info" >
+				<div class="input_box">
+					<input name="lmUserName" id="lmUserName" value="xljin" type="text" class="ipt" placeholder="用户名"/><span class=""></span>
+				</div>
+				<div class="input_box">
+					<input type="password" name="lmUserPassword" id="lmUserPassword" value="123456" class="ipt" placeholder="密码"/>
+				</div>
+				<div class="msg"></div>
+				<div class="input_box">
+					<input id="submit" type="button" class="button1" data-loading-text="正在登录 ..." style="cursor:pointer;" value="登录">
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<%--<ul class="bg-bubbles">--%>
+		<%--<li></li>--%>
+		<%--<li></li>--%>
+		<%--<li></li>--%>
+		<%--<li></li>--%>
+		<%--<li></li>--%>
+		<%--<li></li>--%>
+		<%--<li></li>--%>
+		<%--<li></li>--%>
+		<%--<li></li>--%>
+		<%--<li></li>--%>
+	<%--</ul>--%>
+
+</div>
+
+<p>Copyright © 2019 dkcs.cn All Rights Reserved</p>
+
+<script type="text/javascript" >
+    $(function(){
+        $(document).keydown(function(event){
+            if(event.keyCode ==13){
+                $("#submit").trigger("click");
+            }
+        });
+
+        $("#submit").click(function(){
+            var msgError = "提示：";
+            var isValid = true;
+            if (!isValid){
+            }else if($("#lmUserName").val().length == 0){
+                $(".msg").html(msgError+"账号或密码不能为空");
+                $("#lmUserName").focus();
+                isValid = false;
+            }else if($("#lmUserPassword").val().length == 0){
+                $(".msg").html(msgError+"账号或密码不能为空");
+                $("#lmUserName").focus();
+                isValid = false;
+            }
+
+            if(isValid==true){
+                var ele = $(this);
+                change_Btn_submit(ele);
+                $.ajax({
+                    type: "post",
+                    url:"${path}/login.shtml",
+                    data:$('#loginForm').serialize(),
+                    dataType:"json",
+                    success: function(data) {
+                        if(data.success == true){
+                            window.location.href="${path}/main.shtml";
+                        }else{
+                            restore_Btn_submit(ele);
+                            $(".msg").html(msgError+data.message);
+                        }
+                    },
+                    error: function(request) {
+                        restore_Btn_submit(ele);
+                        console.log("网络异常，操作失败 ");
+                    }
+                });
+            }
+        });
+    });
+
+
+    function change_Btn_submit(_index){
+        _index.attr('disabled',true);
+        var _loading = _index.attr('data-loading-text');
+        _index.val(_loading);
+    }
+    function restore_Btn_submit(_index){
+        _index.attr('disabled',false);
+        _index.val('登录');
+    }
+
+</script>
+
+</BODY>
+</HTML>
+	

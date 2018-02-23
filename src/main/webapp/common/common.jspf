@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/common/shopTag.jsp"%>
+	<title>财位管理中心</title>
+	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+	<META HTTP-EQUIV="Expires" CONTENT="0">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="description" content="overview &amp; stats" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<meta name="renderer" content="webkit">
+	<link href="${path}/images/ioc/favicon.ico" rel="Shortcut Icon">
+
+	<!-- bootstrap & fontawesome -->
+	<%--<link rel="stylesheet" href="${path}/css/bootstrap.css" />--%>
+	<link rel="stylesheet" href="${path}/css/font-awesome.css" />
+
+	<link rel="stylesheet" href="${path}/layui/css/layui.css" />
+
+	<!-- base styles -->
+	<link rel="stylesheet" href="${path}/css/base.css"/>
+	<link rel="stylesheet" href="${path}/css/main.css"/>
+
+	<!-- java scripts -->
+	<script type="text/javascript" src="${path}/js/fsutils.js"></script>
+	<script src="${path}/js/jquery.min.js"></script>
+	<script type="text/javascript" src="${path}/layui/layui.js" ></script>
